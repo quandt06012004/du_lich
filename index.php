@@ -1,8 +1,9 @@
+
+<?php include_once 'header.php';?>
+
 <?php 
-  include_once'connect.php';
   $pro = mysqli_query($conn,"SELECT * from product");
 ?>
-<?php include_once 'header.php';?>
         <!--================Header Area =================-->
         
         <!--================Banner Area =================-->

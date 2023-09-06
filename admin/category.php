@@ -1,11 +1,7 @@
-<?php 
-
-  include_once'../connect.php';
-  $dl = mysqli_query($conn,"SELECT * from category");
-
-?>
-
   <?php include_once 'header.php';?>
+  <?php 
+  $dl = mysqli_query($conn,"SELECT * from category order by id asc");
+?>
   <?php include_once 'aside.php';?>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -35,8 +31,8 @@
                   <td><?= $vl['id']?></td>
                   <td><?= $vl['name']?></td>
                   <td>
-                    <a class="btn btn-primary" href="">sửa</a>
-                    <a class="btn btn-danger" href="">xóa</a>
+                    <a class="btn btn-primary" href="edit.php?id=<?= $vl['id']?>">sửa</a>
+                    <a class="btn btn-danger" href="delete.php?id=<?= $vl['id']?>">xóa</a>
                   </td>
                 </tr>
                 <?php } ?>
