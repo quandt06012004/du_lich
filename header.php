@@ -1,4 +1,6 @@
 <?php
+    ob_start();
+    session_start();
     include  ('./connect.php')
 ?>
 <!doctype html>
@@ -20,6 +22,9 @@
         <!-- main css -->
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/css/responsive.css">
+        
+        <!-- Latest compiled and minified CSS -->
+        
     </head>
     <body>
         <!--================Header Area =================-->
@@ -40,6 +45,7 @@
                             <li class="nav-item"><a class="nav-link" href="about.php">About us</a></li>
                             <li class="nav-item"><a class="nav-link" href="accomodation.php">Accomodation</a></li>
                             <li class="nav-item"><a class="nav-link" href="gallery.php">Gallery</a></li>
+                            <li class="nav-item"><a class="nav-link" href="carts.php">Cart(<?= number_format(getquantt())?>)</a></li>
                             <li class="nav-item submenu dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
                                 <ul class="dropdown-menu">
@@ -48,7 +54,17 @@
                                 </ul>
                             </li> 
                             <li class="nav-item"><a class="nav-link" href="elements.php">Elemests</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
+                            <!-- thong tin -->
+                            <?php if(!empty($_SESSION['my_login'])) :?>
+                            <li class="nav-item"><a class="nav-link" href="">Hi <?= $_SESSION['my_login']->name;?></a></li>
+                            <!-- nhap thong tin -->
+                            <li class="nav-item"><a class="nav-link" href="logout.php">logout</a></li>
+                            <?php else :?>
+                            <!-- dang nhap -->
+                            <li class="nav-item"><a class="nav-link" href="login.php">login</a></li>
+                            <!-- <li class="nav-item"><a class="nav-link" href="register.php">register</a></li> -->
+                            <li class="nav-item"><a class="nav-link" href="register.php">register</a></li>
+                            <?php endif; ?>
                         </ul>
                     </div> 
                 </nav>

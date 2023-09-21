@@ -92,5 +92,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         <script src="assets/js/stellar.js"></script>
         <script src="assets/vendors/lightbox/simpleLightbox.min.js"></script>
         <script src="assets/js/custom.js"></script>
-    </body>
-</html>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="js/app.js"></script>
+
+
+
