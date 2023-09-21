@@ -1,7 +1,15 @@
   <?php include_once 'header.php';?>
   <?php 
-  $dl = mysqli_query($conn,"SELECT * from category order by id asc");
-?>
+    $sql = "SELECT * FROM category ";
+    if (!empty($_GET['shname'])) {
+      $shname = $_GET['shname'];
+      $sql .= " WHERE name LIKE '%$shname%'";
+}
+
+  $sql .= " Order By id DESC";
+  $dl = mysqli_query($conn, $sql);
+  ?>
+
   <?php include_once 'aside.php';?>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -12,7 +20,21 @@
               <small>it all starts here</small>
           </h1>
         </section>
-
+        
+        <div class="chung">
+        <div class="container">
+          <form action="" method="get">
+           <div class="row">
+           <input type="text" name="shname" id="">
+            <button type="submit"><i class="fa fa-search"></i></button>
+           </div>
+          </form>
+        </div>
+        
+        <div class="add">
+          <a class="btn btn-primary" href="add_category.php"><i class="fa fa-plus"></i>  thêm mới</a>
+        </div>
+        </div>
         
         <div class="container">
             
@@ -40,10 +62,13 @@
             </table>
             
         </div>
+        <div class="container">
+    </div>
         
   </div>
+ 
 
-  
+
   <!-- /.content-wrapper -->
 
   <?php include_once 'footer.php'; ?>

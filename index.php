@@ -91,7 +91,7 @@
         <!--================Banner Area =================-->
         
         <!--================ Accomodation Area  =================-->
-        <section class="accomodation_area section_gap">
+        <section class="accomodation_area section_gap" id="home-product">
             <div class="container">
                 <div class="section_title text-center">
                     <h2 class="title_color">Hotel Accomodation</h2>
@@ -103,45 +103,15 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="accomodation_item text-center">
                             <div class="hotel_img">
-                                <img src="<?= $vl['image'] ?>" alt="">
-                                <a href="#" class="btn theme_btn button_hover">Book Now</a>
+                                <img src="upload/<?= $vl['image'] ?>" alt="">
+                                <a href="xu_ly_gio_hang.php?id=<?= $vl['id'] ?>" class="btn theme_btn button_hover">add</a>
                             </div>
                             <a href="#"><h4 class="sec_h4"><?= $vl['name'] ?></h4></a>
                             <h5>$<?= $vl['price'] ?><small>/night</small></h5>
                         </div>
                     </div>
                     <?php } ?>
-                    <!-- <div class="col-lg-3 col-sm-6">
-                        <div class="accomodation_item text-center">
-                            <div class="hotel_img">
-                                <img src="assets/image/room2.jpg" alt="">
-                                <a href="#" class="btn theme_btn button_hover">Book Now</a>
-                            </div>
-                            <a href="#"><h4 class="sec_h4">Single Deluxe Room</h4></a>
-                            <h5>$200<small>/night</small></h5>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="accomodation_item text-center">
-                            <div class="hotel_img">
-                                <img src="assets/image/room3.jpg" alt="">
-                                <a href="#" class="btn theme_btn button_hover">Book Now</a>
-                            </div>
-                            <a href="#"><h4 class="sec_h4">Honeymoon Suit</h4></a>
-                            <h5>$750<small>/night</small></h5>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="accomodation_item text-center">
-                            <div class="hotel_img">
-                                <img src="assets/image/room4.jpg" alt="">
-                                <a href="#" class="btn theme_btn button_hover">Book Now</a>
-                            </div>
-                            <a href="#"><h4 class="sec_h4">Economy Double</h4></a>
-                            <h5>$200<small>/night</small></h5>
-                        </div>
-                    </div>
-                </div> -->
+                    
             </div>
         </section>
         <!--================ Accomodation Area  =================-->

@@ -17,11 +17,20 @@
         <li class="header">MAIN NAVIGATION</li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
+            <i class="fa fa-dashboard"></i> <span>danh mục</span> <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
             <li><a href="category.php"><i class="fa fa-circle-o"></i>category</a></li>
-            <li><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+            <li><a href="add_category.php"><i class="fa fa-circle-o"></i> thêm danh mục</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>sản phẩm</span> <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="product.php"><i class="fa fa-circle-o"></i>product</a></li>
+            <li><a href="add_product.php"><i class="fa fa-circle-o"></i>thêm sản phẩm</a></li>
           </ul>
         </li>
       </ul>
